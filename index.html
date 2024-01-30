@@ -11,24 +11,165 @@
     <canvas id="jsCanvas" class="canvas"></canvas>
     <div class="controls">
       <div class="controls__range">
-        <input type="range" id="jsRange" min="0.1" max="5.0" value="2.5" step="0.1" />
+        <input id="lineWidth" type="range" min="1" max="10" value="5"/>
+        <div class="color-option-wrap">
+          <input id="color" type="color">
+          <div class="color-option" style="background-color: #1abc9c" data-color="#1abc9c"></div>
+          <div class="color-option" style="background-color: #3498db" data-color="#3498db"></div>
+          <div class="color-option" style="background-color: #34495e" data-color="#34495e"></div>
+          <div class="color-option" style="background-color: #27ae60" data-color="#27ae60"></div>
+          <div class="color-option" style="background-color: #8e44ad" data-color="#8e44ad"></div>
+          <div class="color-option" style="background-color: #f1c40f" data-color="#f1c40f"></div>
+          <div class="color-option" style="background-color: #e74c3c" data-color="#e74c3c"></div>
+          <div class="color-option" style="background-color: #95a5a6" data-color="#95a5a6"></div>
+          <div class="color-option" style="background-color: #d35400" data-color="#d35400"></div>
+          <div class="color-option" style="background-color: #bdc3c7" data-color="#bdc3c7"></div>
+          <div class="color-option" style="background-color: #2ecc71" data-color="#2ecc71"></div>
+          <div class="color-option" style="background-color: #e67e22" data-color="#e67e22"></div>
+        </div>
       </div>
       <div class="controls__btns">
-        <button id="jsMode">Fill</button>
-        <button id="jsSave">Save</button>
-      </div>
-      <div class="controls__colors" id="jsColors">
-        <div class="controls__color" style="background-color: #2c2c2c"></div>
-        <div class="controls__color" style="background-color: white"></div>
-        <div class="controls__color" style="background-color: #ff3b30"></div>
-        <div class="controls__color" style="background-color: #ff9500"></div>
-        <div class="controls__color" style="background-color: #ffcc00"></div>
-        <div class="controls__color" style="background-color: #4cd963"></div>
-        <div class="controls__color" style="background-color: #5ac8fa"></div>
-        <div class="controls__color" style="background-color: #0579ff"></div>
-        <div class="controls__color" style="background-color: #5856d6"></div>
+        <button id="drawBtn">🖍️</button>
+        <button id="fillBtn">🪣</button>
+        <button id="resetBtn">🕳️</button>
+        <button id="saveBtn">📁</button>
       </div>
     </div>
-    <script src="custom.js"></script>
+    <script src="custom.js">
+    </script>
   </body>
 </html>
+
+
+
+<section class="home-panel pre-reservation-panel" ga_action="{{data.ga_action.text}}" style="padding-top:{{data.pad_top.text}}; padding-bottom:{{data.pad_btm.text}};">
+    <div class="l-grid"> 
+        <h2 class="home-h">완전히 새로운 AI폰의 시작,<br />갤럭시 S24</h2>
+        <div class="stretch-banner swiper-container" style="margin:18px 0 0 20px">
+        <div class="swiper-wrapper">  
+            <div class="swiper-slide banner-item">
+            <div class="banner-card">
+                <a href="https://m.shop.tworld.co.kr/buyproc/prod-detail?stepSeq=1&categoryId=20010014&productGrpId=000006334">
+                <img src="https://cdnm.shop.tworld.co.kr/pimg/plan_editor/202401/27539122675382289.png" alt="갤럭시 S24 울트라 단말 자세히 보기">  
+                <div class="product-text blind">
+                    <h4 style="line-height:26px;">티타늄 프레임, 플랫 디자인<br />Galaxy S24 Ultra</h4>
+                    <p class="product-exp">어두워도 디테일한 카메라 성능</p>
+                </div>  
+                </a>
+            </div>    
+            </div>
+            <div class="swiper-slide banner-item">
+            <div class="banner-card">
+                <a href="https://m.shop.tworld.co.kr/buyproc/prod-detail?stepSeq=1&categoryId=20010014&productGrpId=000006333">
+                <img src="https://cdnm.shop.tworld.co.kr/pimg/plan_editor/202401/27539127465521470.png" alt="갤럭시 S24+ 단말 자세히 보기">
+                <div class="product-text blind">
+                    <h4 style="line-height:26px;">차원이 다른 AI 라이프<br />Galaxy S24+</h4>
+                    <p class="product-exp">당신의 일상을 더 편하고 쉽게</p>
+                </div>   
+                </a>
+            </div>
+            </div> 
+            <div class="swiper-slide banner-item">
+            <div class="banner-card">
+                <a href="https://m.shop.tworld.co.kr/buyproc/prod-detail?stepSeq=1&categoryId=20010014&productGrpId=000006332">
+                <img src="https://cdnm.shop.tworld.co.kr/pimg/plan_editor/202401/27539131945607816.png" alt="갤럭시 S24 단말 자세히 보기">
+                <div class="product-text blind">
+                    <h4 style="line-height:26px;">디테일한 프리미엄 디자인<br />Galaxy S24</h4>
+                    <p class="product-exp">자연의 견고함을 담은 아름다운 컬러</p>
+                </div>  
+                </a> 
+            </div>
+            </div>
+        </div>  
+        <div class="swiper-pagination"></div> 
+        </div>  
+    </div>
+    <script>
+    $( window ).on( "load", function() { 
+        UI.tab();
+    });
+  
+    </script>
+
+    <style>
+    .home-panel.pre-reservation-panel .l-grid .stretch-banner.top-space {
+        margin:24px 0 0 20px !important;
+    }
+
+    @media screen and (max-width:322px) {
+        .product-text {
+        padding: 0 27px !important
+        }
+    }
+    </style>
+</section>
+
+
+<div class="pre-reservation-wrap no-margin" ga_action="{{data.ga_action.text}}" style="padding-top:{{data.pad_top.text}};padding-bottom:{{data.pad_btm.text}};">
+	<div class="l-grid">
+	  <h3 class="h-type">완전히 새로운 AI폰의 시작, 갤럭시 S24</h3>
+	  <div class="stretch-banner" style="margin-top:70px !important;"> 
+		<div class="banner-item wide" style="background:#fff;">
+		  <div class="cover">
+			<img src="https://cdnw.shop.tworld.co.kr/pimg/plan_editor/202401/27539084199485429.png" alt="갤럭시 S24 울트라 단말 자세히 보기">
+			<div class="cover-text blind">
+				Galaxy S24 Ultra
+			</div>
+		  </div>
+		  <div class="origin-product-list">
+			<a href="https://shop.tworld.co.kr/buyproc/prod-detail?stepSeq=1&categoryId=20010014&productGrpId=000006334" class="origin-product-item">
+			  <img src="https://cdnw.shop.tworld.co.kr/pimg/plan_editor/202401/27539077620504832.png" alt="갤럭시 S24 울트라 단말 자세히 보기">
+			  <div class="product-text blind">
+				<h4>티타늄 프레임, 플랫 디자인<br />Galaxy S24 Ultra</h4>
+				<p class="product-exp">어두워도 디테일한 카메라 성능</p>
+			  </div>  
+			</a>
+		  </div>
+		</div>
+		<div class="banner-item" style="background:#fff;">
+		  <div class="cover">
+			<img src="https://cdnw.shop.tworld.co.kr/pimg/plan_editor/202401/27539100737715499.png" alt="갤럭시 S24+ 단말 자세히 보기">
+			<div class="cover-text blind">
+				Galaxy S24+
+			</div>
+		  </div>
+		  <div class="origin-product-list">
+			<a href="https://shop.tworld.co.kr/buyproc/prod-detail?stepSeq=1&categoryId=20010014&productGrpId=000006333" class="origin-product-item">
+			  <img src="https://cdnw.shop.tworld.co.kr/pimg/plan_editor/202401/27539094150960506.png" alt="갤럭시 S24+ 단말 자세히 보기">
+			  <div class="product-text blind">
+				<h4>차원이 다른 AI 라이프<br />Galaxy S24+</h4>
+				<p class="product-exp">당신의 일상을 더 편하고 쉽게, 갤럭시 AI</p>
+			  </div> 
+			</a>
+		  </div>
+		</div>    
+		<div class="banner-item" style="background:#fff;">
+		  <div class="cover">
+			<img src="https://cdnw.shop.tworld.co.kr/pimg/plan_editor/202401/27539112727760199.png" alt="갤럭시 S24 단말 자세히 보기">
+			<div class="cover-text blind">
+				Galaxy S24
+			</div>
+		  </div>
+		  <div class="origin-product-list">
+			<a href="https://shop.tworld.co.kr/buyproc/prod-detail?stepSeq=1&categoryId=20010014&productGrpId=000006332" class="origin-product-item">
+			  <img src="https://cdnw.shop.tworld.co.kr/pimg/plan_editor/202401/27539108490357740.png" alt="갤럭시 S24 단말 자세히 보기">
+			  <div class="product-text blind">
+				<h4>디테일한 프리미엄 디자인<br />Galaxy S24</h4>
+				<p class="product-exp">자연의 견고함을 담은 아름다운 컬러</p>
+			  </div> 
+			</a>
+		  </div>
+		</div>
+	  </div>           
+	</div>
+	<script>
+	  $( window ).on( "load", function() { 
+		  UI.tab();
+	  });
+	</script>
+	<style>
+	  .pre-reservation-wrap.no-margin {
+		margin-top:0;
+	  }
+	</style>
+  </div>
